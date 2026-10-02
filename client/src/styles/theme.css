@@ -1,0 +1,66 @@
+:root{
+    --primary:#D32F2F;
+    --primary-dark:#B71C1C;
+    --secondary:#1565C0;
+    --success:#2E7D32;
+    --warning:#F57C00;
+
+    --bg:#F4F7FA;
+    --card-bg:rgba(255,255,255,.75);
+
+    --text:#222;
+    --border:rgba(255,255,255,.3);
+
+    --shadow:0 8px 30px rgba(0,0,0,.12);
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:linear-gradient(135deg,#f4f7fa,#dfe9f3);
+    font-family:'Segoe UI',sans-serif;
+}
+
+.glass-card{
+    background:var(--card-bg);
+    backdrop-filter:blur(18px);
+    border:1px solid var(--border);
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.glass-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+}
+
+.main-btn{
+    border:none;
+    border-radius:12px;
+    padding:12px 24px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.main-btn:hover{
+    transform:scale(1.05);
+}
+
+.page-title{
+    font-size:40px;
+    font-weight:bold;
+}
+
+.subtitle{
+    color:#555;
+}
+
+.spin{
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}

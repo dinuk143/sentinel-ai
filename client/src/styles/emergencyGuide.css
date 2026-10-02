@@ -1,0 +1,1131 @@
+/* ==========================================
+   SENTINEL AI — FIRST AID KNOWLEDGE CENTER
+========================================== */
+
+.guide-page {
+  position: relative;
+  min-height: calc(100vh - var(--navbar-height));
+  padding: 45px 24px 70px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(56, 189, 248, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 55%,
+      rgba(239, 68, 68, 0.05),
+      transparent 28%
+    ),
+    #060b14;
+}
+
+.guide-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(56, 189, 248, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(56, 189, 248, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+}
+
+.guide-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.guide-glow-blue {
+  top: -250px;
+  left: -200px;
+  background: #38bdf8;
+}
+
+.guide-glow-red {
+  right: -250px;
+  bottom: 8%;
+  background: #ef4444;
+}
+
+.guide-container {
+  position: relative;
+  z-index: 2;
+  width: min(1250px, 100%);
+  margin: 0 auto;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.guide-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.guide-hero-content {
+  padding: 28px;
+
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16, 29, 48, 0.88),
+      rgba(8, 16, 29, 0.88)
+    );
+}
+
+.guide-eyebrow {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 17px;
+  padding: 7px 11px;
+
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 100px;
+
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.05);
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.guide-eyebrow span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: #22c55e;
+
+  box-shadow:
+    0 0 12px rgba(34, 197, 94, 0.8);
+}
+
+.guide-title-row {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.guide-title-icon {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(34, 197, 94, 0.16);
+  border-radius: 17px;
+
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.07);
+
+  font-size: 24px;
+}
+
+.guide-title-row h1 {
+  margin-bottom: 7px;
+
+  color: #f8fafc !important;
+
+  font-size: clamp(28px, 4vw, 41px);
+  font-weight: 900;
+
+  letter-spacing: -1.4px;
+}
+
+.guide-title-row p {
+  max-width: 670px;
+
+  color: #7c8ca1 !important;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.guide-hero-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 23px;
+}
+
+.guide-hero-status > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 100px;
+
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.02);
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.guide-hero-status svg {
+  color: #38bdf8;
+}
+
+/* EMERGENCY CALL HERO */
+
+.guide-emergency-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 25px;
+
+  border: 1px solid rgba(239, 68, 68, 0.17);
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(239, 68, 68, 0.13),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(45, 16, 22, 0.72),
+      rgba(16, 14, 23, 0.9)
+    );
+}
+
+.guide-emergency-action > span {
+  margin-bottom: 7px;
+
+  color: #f87171;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+
+.guide-emergency-action strong {
+  margin-bottom: 7px;
+
+  color: #f8fafc;
+
+  font-size: 18px;
+}
+
+.guide-emergency-action p {
+  margin-bottom: 17px;
+
+  color: #8f7f86 !important;
+
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.guide-emergency-action button {
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #b91c1c
+    );
+
+  box-shadow:
+    0 12px 30px rgba(239, 68, 68, 0.15);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.guide-emergency-action button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 35px rgba(239, 68, 68, 0.22);
+}
+
+/* ==========================================
+   WARNING
+========================================== */
+
+.guide-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  margin-bottom: 35px;
+  padding: 14px 16px;
+
+  border: 1px solid rgba(245, 158, 11, 0.13);
+  border-radius: 13px;
+
+  background: rgba(245, 158, 11, 0.04);
+}
+
+.guide-warning-icon {
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.08);
+
+  font-size: 12px;
+}
+
+.guide-warning span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #fbbf24;
+
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+}
+
+.guide-warning p {
+  color: #918775 !important;
+
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.guide-search-section {
+  margin-bottom: 25px;
+}
+
+.guide-search-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 14px;
+}
+
+.guide-search-heading > div:first-child > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #38bdf8;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.guide-search-heading h2 {
+  margin-bottom: 4px;
+
+  color: #f1f5f9 !important;
+
+  font-size: 21px;
+  font-weight: 850;
+}
+
+.guide-search-heading p {
+  color: #64748b !important;
+
+  font-size: 10px;
+}
+
+.guide-result-count {
+  min-width: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-radius: 10px;
+
+  background: rgba(56, 189, 248, 0.035);
+}
+
+.guide-result-count strong {
+  color: #7dd3fc;
+  font-size: 15px;
+}
+
+.guide-result-count span {
+  color: #526278;
+
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+}
+
+.guide-search-box {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  min-height: 52px;
+
+  padding: 0 16px;
+
+  border: 1px solid rgba(148, 163, 184, 0.11);
+  border-radius: 13px;
+
+  background: rgba(9, 19, 33, 0.92);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.guide-search-box:focus-within {
+  border-color: rgba(56, 189, 248, 0.32);
+
+  box-shadow:
+    0 0 0 3px rgba(56, 189, 248, 0.04);
+}
+
+.guide-search-box > svg {
+  flex-shrink: 0;
+
+  color: #526278;
+  font-size: 13px;
+}
+
+.guide-search-box input {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  outline: none;
+
+  color: #e2e8f0;
+  background: transparent;
+
+  font-size: 11px;
+}
+
+.guide-search-box input::placeholder {
+  color: #46566b;
+}
+
+.guide-clear-search {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: none;
+  border-radius: 8px;
+
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.035);
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   GUIDE GRID
+========================================== */
+
+.guide-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.emergency-guide-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16, 28, 46, 0.9),
+      rgba(8, 16, 29, 0.9)
+    );
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.13);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.emergency-guide-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 15%;
+  right: 15%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(56, 189, 248, 0.35),
+      transparent
+    );
+}
+
+.emergency-guide-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(56, 189, 248, 0.2);
+
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* CARD HEADER */
+
+.emergency-card-header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 18px;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.07);
+}
+
+.emergency-guide-icon {
+  width: 47px;
+  height: 47px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  border-radius: 13px;
+
+  background: rgba(56, 189, 248, 0.045);
+
+  font-size: 22px;
+}
+
+.emergency-card-heading {
+  min-width: 0;
+  padding-right: 30px;
+}
+
+.emergency-category {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #38bdf8;
+
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.emergency-card-heading h2 {
+  color: #eaf0f8 !important;
+
+  font-size: 14px;
+  font-weight: 850;
+
+  line-height: 1.3;
+}
+
+.guide-number {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  color: #334155;
+
+  font-size: 8px;
+  font-weight: 900;
+}
+
+/* COMMON SECTIONS */
+
+.emergency-signs,
+.emergency-steps {
+  padding: 16px 18px;
+}
+
+.emergency-signs {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.06);
+
+  background:
+    rgba(239, 68, 68, 0.015);
+}
+
+.emergency-section-title {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 8px;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.signs-title {
+  color: #f87171;
+}
+
+.steps-title {
+  color: #4ade80;
+}
+
+.emergency-signs p {
+  color: #8796aa !important;
+
+  font-size: 9.5px;
+  line-height: 1.65;
+}
+
+/* STEPS */
+
+.emergency-steps {
+  flex: 1;
+}
+
+.emergency-steps ol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.emergency-steps li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+}
+
+.step-number {
+  width: 22px;
+  height: 22px;
+
+  flex: 0 0 22px;
+
+  display: grid;
+  place-items: center;
+
+  margin-top: 1px;
+
+  border: 1px solid rgba(34, 197, 94, 0.12);
+  border-radius: 7px;
+
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.05);
+
+  font-size: 7px;
+  font-weight: 900;
+}
+
+.emergency-steps li p {
+  color: #93a1b3 !important;
+
+  font-size: 9.5px;
+  line-height: 1.55;
+}
+
+/* CARD FOOTER */
+
+.emergency-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: auto;
+  padding: 11px 18px;
+
+  border-top: 1px solid rgba(148, 163, 184, 0.07);
+
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.emergency-card-footer > div {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #475569;
+
+  font-size: 6px;
+  font-weight: 900;
+
+  letter-spacing: 0.7px;
+}
+
+.emergency-card-footer > div svg {
+  color: #38bdf8;
+}
+
+.emergency-card-footer button {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 6px 9px;
+
+  border: 1px solid rgba(239, 68, 68, 0.13);
+  border-radius: 7px;
+
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.05);
+
+  font-size: 8px;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   NO RESULTS
+========================================== */
+
+.guide-no-results {
+  padding: 65px 25px;
+
+  border: 1px solid rgba(148, 163, 184, 0.09);
+  border-radius: 18px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.guide-no-result-icon {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 14px;
+
+  border-radius: 16px;
+
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.06);
+
+  font-size: 20px;
+}
+
+.guide-no-results > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #38bdf8;
+
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.guide-no-results h2 {
+  margin-bottom: 7px;
+
+  color: #e2e8f0 !important;
+
+  font-size: 18px;
+}
+
+.guide-no-results p {
+  max-width: 470px;
+
+  margin: 0 auto;
+
+  color: #64748b !important;
+
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.guide-no-result-actions {
+  display: flex;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 17px;
+}
+
+.guide-reset-button,
+.guide-call-button {
+  min-height: 40px;
+
+  padding: 0 14px;
+
+  border-radius: 9px;
+
+  font-size: 9px;
+  font-weight: 850;
+
+  cursor: pointer;
+}
+
+.guide-reset-button {
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.guide-call-button {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  border: none;
+
+  color: white;
+  background: #dc2626;
+}
+
+/* ==========================================
+   EMERGENCY FOOTER
+========================================== */
+
+.guide-emergency-footer {
+  display: grid;
+
+  grid-template-columns:
+    auto minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+  padding: 19px;
+
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(239, 68, 68, 0.07),
+      rgba(14, 20, 32, 0.75)
+    );
+}
+
+.guide-footer-icon {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.08);
+
+  font-size: 17px;
+
+  animation:
+    guideHeartbeat 1.8s ease-in-out infinite;
+}
+
+@keyframes guideHeartbeat {
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+.guide-footer-content > span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #f87171;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  letter-spacing: 1.1px;
+}
+
+.guide-footer-content h2 {
+  margin-bottom: 3px;
+
+  color: #f1f5f9 !important;
+
+  font-size: 14px;
+}
+
+.guide-footer-content p {
+  color: #7c899b !important;
+
+  font-size: 9px;
+}
+
+.guide-emergency-footer > button {
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border: none;
+  border-radius: 9px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #b91c1c
+    );
+
+  font-size: 9px;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+  .guide-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+  .guide-page {
+    padding:
+      28px 14px
+      calc(
+        45px +
+        env(safe-area-inset-bottom)
+      );
+  }
+
+  .guide-hero-content,
+  .guide-emergency-action {
+    padding: 19px;
+  }
+
+  .guide-title-row {
+    align-items: flex-start;
+  }
+
+  .guide-title-icon {
+    width: 49px;
+    height: 49px;
+
+    border-radius: 14px;
+
+    font-size: 19px;
+  }
+
+  .guide-title-row h1 {
+    font-size: 27px;
+
+    letter-spacing: -1px;
+  }
+
+  .guide-title-row p {
+    font-size: 10px;
+  }
+
+  .guide-search-heading {
+    align-items: flex-start;
+  }
+
+  .guide-search-heading h2 {
+    font-size: 18px;
+  }
+
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-guide-card:hover {
+    transform: none;
+  }
+
+  .guide-emergency-footer {
+    grid-template-columns: auto 1fr;
+  }
+
+  .guide-emergency-footer > button {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   VERY SMALL PHONE
+========================================== */
+
+@media (max-width: 380px) {
+  .guide-title-row {
+    gap: 11px;
+  }
+
+  .guide-title-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .guide-title-row h1 {
+    font-size: 23px;
+  }
+
+  .guide-search-heading {
+    flex-direction: column;
+  }
+
+  .guide-result-count {
+    flex-direction: row;
+
+    gap: 5px;
+
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .guide-no-result-actions {
+    flex-direction: column;
+  }
+
+  .guide-call-button {
+    justify-content: center;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .guide-footer-icon {
+    animation: none;
+  }
+}
